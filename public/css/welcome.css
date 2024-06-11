@@ -1,0 +1,157 @@
+/* public/css/welcome.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cae5d7;
+}
+
+header h1 {
+    font-size: 5em;
+    color: #156434;
+    font-weight: bold;
+    text-shadow: 2px 2px #6c757d;
+}
+header p {
+    font-size: 2.5em;
+    color: #2b9d2b;
+    font-weight: 500;
+}
+
+/* Sección de búsqueda y suscripción */
+.search-bar, .subscribe {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+}
+
+.subscribe {
+    text-align: right;
+}
+
+.search-bar .form-control, .subscribe .form-control {
+    width: 100%;
+}
+
+.search-bar .btn, .subscribe .btn {
+    margin-top: 10px;
+}
+
+/* Sección de promoción principal */
+.main-promotion {
+    background-image: url('../img/capa.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.main-promotion h2 {
+    font-size: 4em;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.main-promotion p {
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.main-promotion .btn {
+    font-size: 1.2em;
+    padding: 0.6em 1.2em;
+    color: rgb(255, 255, 255);
+}
+
+/* Sección de productos */
+.products .card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.products .card-title {
+    font-size: 1.5em;
+    color: #155c28; 
+}
+
+.products .card-text {
+    color: hsl(0, 0%, 0%);
+}
+
+/* Sección de suscripción */
+.subscribe .form-control {
+    display: inline-block;
+    width: 70%;
+}
+
+.subscribe .btn {
+    display: inline-block;
+    width: 25%;
+}
+
+/* Modal */
+.modal-title {
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+.modal-body img {
+    max-width: 100%;
+}
+
+/* Elimina estilos personalizados para el modal que interfieren con Bootstrap */
+.what img {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+}
+
+/* Eliminar estilos para el modal */
+
+.btn, .btn-primary {
+    background-color: rgb(141, 26, 31); /* Rojo */
+    border-color: #000000; /* Rojo */
+    color: #fff; /* Texto blanco */
+}
+
+.btn:hover, .btn-primary:hover {
+    background-color: #c82333; /* Rojo más oscuro */
+    border-color: #bd2130; /* Rojo más oscuro */
+    color: #fff;
+}
+
+.btn:focus, .btn-primary:focus {
+    background-color: #c82333;
+    border-color: #bd2130;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); /* Sombra */
+}
+
+.btn:active, .btn-primary:active {
+    background-color: #bd2130;
+    border-color: #b21f2d;
+}
+
+.btn.disabled, .btn-primary.disabled, .btn:disabled, .btn-primary:disabled {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.flavors-container {
+    background: rgba(20, 74, 46, 0.233);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo personalizado para el título y el texto */
+.flavors-header h1 {
+    font-size: 5em;
+    color: #156434;
+    font-weight: bold;
+    text-shadow: 2px 2px #6c757d;
+}
+
+.flavors-header p {
+    font-size: 1.5em;
+    color: #2b9d2b;
+    font-weight: 500;
+}
