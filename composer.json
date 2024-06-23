@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "vilfredos/Coca-the-shark",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Coca The Shark - Fresh Products",
+    "keywords": ["laravel", "framework", "ecommerce"],
     "license": "MIT",
     "require": {
         "php": "^8.2",
@@ -11,8 +11,6 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
-        "laravel/pint": "^1.13",
-        "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
         "phpunit/phpunit": "^11.0.1"
@@ -38,13 +36,12 @@
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
         "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-            "@php artisan migrate --graceful --ansi"
-        ]
+            "@php artisan migrate --ansi"
+        ],
+        "post-create-project-cmd": []
     },
     "extra": {
         "laravel": {
