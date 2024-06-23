@@ -30,8 +30,6 @@
                 </form>
             </div>
             <div class="subscribe">
-                <form action="#" method="POST">
-                    @csrf
                     <div class="form-group d-flex align-items-center">
                         <label for="email" class="mr-2">Suscríbete</label>
                         <input type="email" name="email" class="form-control" placeholder="Tu correo electrónico o número de celular" required>
@@ -39,7 +37,6 @@
                             <i class="fas fa-user-plus"></i>
                         </button>
                     </div>
-                </form>
             </div>
         </section>
 

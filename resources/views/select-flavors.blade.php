@@ -39,13 +39,33 @@
                             @endforeach
                         </div>
                         <div style="display: flex; justify-content: center;">
-                            <button type="submit" class="btn btn-primary mt-3" id="submit-btn">Añadir a la cesta</button>
+                            <button type="submit" class="btn btn-primary mt-3" id="submit-btn" data-toggle="modal" data-target="#qrModal">Añadir a la cesta</button>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="col-md-4 text-center">
                 <img src="{{ asset('img/mezcla.jpg') }}" alt="Científico" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="qrModalLabel">Escanea el siguiente QR</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="{{ asset('img/qr.png') }}" alt="QR Code" class="img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
             </div>
         </div>
     </div>
@@ -68,6 +88,12 @@
                         alert('Puedes seleccionar hasta un máximo de ' + maxFlavors + ' sabores.');
                     }
                 });
+            });
+
+            // Abrir el modal cuando se haga clic en el botón "Añadir a la cesta"
+            submitBtn.addEventListener('click', function(e) {
+                e.preventDefault(); // Evitar que el formulario se envíe
+                $('#qrModal').modal('show'); // Mostrar el modal
             });
         });
     </script>
