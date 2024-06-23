@@ -2,17 +2,23 @@ services:
   - type: web
     name: coca-the-shark
     env: php
-    plan: free
+    region: oregon
     buildCommand: 'composer install && npm install && npm run dev'
     startCommand: 'php artisan serve --host 0.0.0.0 --port 10000'
     envVars:
       - key: APP_KEY
-        generateValue: true
-      - key: APP_ENV
-        value: production
-      - key: APP_DEBUG
-        value: false
-      - key: APP_URL
-        value: https://coca-the-shark.onrender.com
-    domains:
-      - coca-the-shark.onrender.com
+        sync: false
+        generate: true
+    envVarGroups:
+      - name: laravel
+        vars:
+          - key: APP_ENV
+            value: production
+          - key: APP_DEBUG
+            value: false
+          - key: APP_URL
+            value: https://coca-the-shark.onrender.com
+          - key: DB_CONNECTION
+            value: sqlite
+          - key: LOG_CHANNEL
+            value: stderr
